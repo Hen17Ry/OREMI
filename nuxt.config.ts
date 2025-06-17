@@ -12,5 +12,9 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@nuxt/ui'
-  ]
+  ],
+
+  runtimeConfig: {
+    OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
+  }
 })
