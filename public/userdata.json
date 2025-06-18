@@ -1,0 +1,34 @@
+{
+  "carte_grise": {
+    "adresse": "25 Rue des Technologies, Porto-Novo",
+    "plaqueImmatriculation": "AY-456-2T",
+    "marque": "Toyota",
+    "modele": "Corolla Hybrid",
+    "numeroChassis": "JTNB23EU0J3098765",
+    "dateMiseEnCirculation": "05/08/2022",
+    "typeCarburant": "Hybride",
+    "couleur": "G"
+  },
+  "cip": {
+    "nom": "AGOSSOU",
+    "sexe": "Féminin",
+    "dateNaissance": "28/02/1990",
+    "adresse": "25 Rue des Technologies",
+    "ville": "Porto-Novo",
+    "telephone": "+229 90 1234 56",
+    "numeroIdentification": "BN900228F001"
+  },
+  "permis": {
+    "nom": "AGOSSOU",
+    "prenom": "Irene",
+    "dateNaissance": "28/02/1990",
+    "adresse": "25 Rue des Technologies, Porto-Novo",
+    "numeroPermis": "PC2024900123",
+    "categoriePermis": "B",
+    "dateDelivrance": "10/10/2021",
+    "dateExpiration": "10/10/2031",
+    "centreDelivrance": "Centre National des Permis - Porto-Novo",
+    "telephone": "+229 90 12 34 56"
+  },
+  "timestamp": "2025-06-18T05:47:31.583Z"
+}
