@@ -12,7 +12,7 @@
             </div>
             <div>
               <h2 class="welcome-title">Bienvenue !</h2>
-              <p class="welcome-name">Chris Gossou</p>
+              <p class="welcome-name">Chris Cossou</p>
             </div>
             <div class="notif-bell">
               <span class="material-icons bell-icon">notifications</span>
@@ -72,7 +72,7 @@
           </div>
           
           <div class="modal-popup-products">
-            <NuxtLink to="/auto" class="modal-popup-product">
+            <NuxtLink to="/Step1DevisAuto" class="modal-popup-product">
               <img src="../public/auto.png" alt="Assurance Auto" class="modal-popup-img" />
               <div class="modal-popup-label">Assurance<br>Auto</div>
             </NuxtLink>
