@@ -3,7 +3,7 @@ import path from 'path'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const filePath = path.resolve('public/coffre.json')
+  const filePath = path.resolve('public/data/coffre.json')
 
   // Définir le type Transaction
   type Transaction = {

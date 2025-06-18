@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
     }
 
     // Sauvegarde dans un fichier JSON
-    const savePath = path.resolve('public/userdata.json')
+    const savePath = path.resolve('public/data/userdata.json')
     const payload = {
       ...result,
       timestamp: new Date().toISOString()

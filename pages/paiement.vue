@@ -2,7 +2,7 @@
   <div class="payment-modal-bg">
     <div class="payment-modal">
       <div class="payment-title">Choisissez le moyen de paiement</div>
-      <form>
+      <form @submit="handleSubmit">
         <div
           v-for="option in options"
           :key="option.value"
@@ -24,32 +24,70 @@
         <div class="payment-cancel">Annuler</div>
       </form>
     </div>
+    <div v-if="showSuccessModal" class="payment-success-modal">
+      <div class="payment-success-box">
+        ✅ Paiement de 700 000 FCFA effectué avec succès.
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
 import { ref } from 'vue'
+
+const router = useRouter()
 const selected = ref('kkiapay')
+const showSuccessModal = ref(false)
+
 const options = [
-  {
-    value: 'kkiapay',
-    label: 'Kkiapay',
-    img: '/kkiapay.png', 
-  },
-  {
-    value: 'fedapay',
-    label: 'FedaPay',
-    img: '/fedapay.png',
-  },
-  {
-    value: 'epargne',
-    label: 'Utiliser votre épargne',
-    img: '/epargne.png',
-  },
+  { value: 'kkiapay', label: 'Kkiapay', img: '/kkiapay.png' },
+  { value: 'fedapay', label: 'FedaPay', img: '/fedapay.png' },
+  { value: 'epargne', label: 'Utiliser votre épargne', img: '/epargne.png' },
 ]
+
+async function handleSubmit(e) {
+  e.preventDefault()
+  if (selected.value === 'epargne') {
+    const res = await $fetch('/api/pay-epargne')
+    if (res.success) {
+      showSuccessModal.value = true
+      setTimeout(() => {
+        router.push('/')
+      }, 2000)
+    } else {
+      alert('Erreur : ' + res.error)
+    }
+  } else {
+    // autres moyens de paiement à gérer ici
+    alert('Autre méthode non encore implémentée.')
+  }
+}
+
 </script>
 
 <style scoped>
+.payment-success-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.payment-success-box {
+  background: #e6ffee;
+  color: #065f46;
+  padding: 22px 38px;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px #0002;
+}
+
 .payment-modal-bg {
   min-height: 100vh;
   background: #0002;

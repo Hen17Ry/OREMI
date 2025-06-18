@@ -1,0 +1,67 @@
+{
+  "solde": 6313000,
+  "date_creation": "2025-06-17T20:55:41.301Z",
+  "etat": "actif",
+  "transactions": [
+    {
+      "montant": 10000,
+      "date": "2025-06-17T20:55:41.301Z",
+      "mode": "paiement",
+      "statut": "réussi"
+    },
+    {
+      "montant": 10000,
+      "date": "2025-06-17T21:30:10.134Z",
+      "mode": "kkiapay",
+      "statut": "réussi"
+    },
+    {
+      "montant": 1000,
+      "date": "2025-06-17T22:53:51.494Z",
+      "mode": "paiement",
+      "statut": "réussi"
+    },
+    {
+      "montant": 9790000,
+      "date": "2025-06-18T08:05:02.803Z",
+      "mode": "paiement",
+      "statut": "réussi"
+    },
+    {
+      "montant": 1000,
+      "date": "2025-06-18T08:35:16.709Z",
+      "mode": "paiement",
+      "statut": "réussi"
+    },
+    {
+      "montant": 700000,
+      "date": "2025-06-18T09:12:54.109Z",
+      "mode": "épargne",
+      "statut": "réussi"
+    },
+    {
+      "montant": 700000,
+      "date": "2025-06-18T09:20:03.913Z",
+      "mode": "épargne",
+      "statut": "réussi"
+    },
+    {
+      "montant": 700000,
+      "date": "2025-06-18T09:29:40.537Z",
+      "mode": "épargne",
+      "statut": "réussi"
+    },
+    {
+      "montant": 700000,
+      "date": "2025-06-18T09:32:46.408Z",
+      "mode": "épargne",
+      "statut": "réussi"
+    },
+    {
+      "montant": 1000,
+      "date": "2025-06-18T09:33:21.812Z",
+      "mode": "paiement",
+      "statut": "réussi"
+    }
+  ]
+}

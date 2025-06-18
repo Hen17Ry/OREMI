@@ -64,7 +64,7 @@ const checkCoffreStatus = async () => {
   const res = await fetch('/api/check-coffre')
   const data = await res.json()
 
-  if (data.montant > 0) {
+  if (data.solde > 0) {
     navigateTo('/coffre_dash')
   } else {
     showModal.value = true

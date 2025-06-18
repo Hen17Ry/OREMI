@@ -27,7 +27,7 @@
           <h3>Devis</h3>
           <p class="stat-desc">Devis effectués</p>
           <div class="stat-value-row">
-            <span class="stat-value">0</span>
+            <span class="stat-value">{{ devis }}</span>
             <span class="material-icons stat-icon">receipt_long</span>
           </div>
         </section>
@@ -35,7 +35,7 @@
           <h3>Mes souscriptions</h3>
           <p class="stat-desc">Total effectués</p>
           <div class="stat-value-row">
-            <span class="stat-value">0</span>
+            <span class="stat-value">{{souscription}}</span>
             <span class="material-icons stat-icon">category</span>
           </div>
         </section>
@@ -105,6 +105,9 @@
 <script setup>
 import { ref } from 'vue'
 const showModal = ref(false)
+const data = await $fetch('/data/submit.json')
+const devis = data.devis
+const souscription = data.souscription
 </script>
 
 <style scoped>

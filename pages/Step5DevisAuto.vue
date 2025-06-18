@@ -6,7 +6,7 @@
         <div class="prime-ttc-box">
           <div>
             <div class="prime-ttc-label">Prime TTC</div>
-            <div class="prime-ttc-value">16 000 FCFA</div>
+            <div class="prime-ttc-value">{{ montant }}</div>
           </div>
           <button class="prime-ttc-edit">
             <span class="material-icons" style="font-size:18px;vertical-align:middle;">edit</span>
@@ -22,7 +22,7 @@
           <div class="details-list">
             <div class="details-row">
               <span>Valeur prime nette RC</span>
-              <span class="bold">13545</span>
+              <span class="bold">650000</span>
             </div>
             <div class="details-row details-row-reduction">
               <span>Réduction</span>
@@ -30,34 +30,40 @@
             </div>
             <div class="details-row">
               <span>Acessoires</span>
-              <span class="bold">1000</span>
+              <span class="bold">250000</span>
             </div>
             <div class="details-row">
               <span>Taxe</span>
-              <span class="bold">1455</span>
+              <span class="bold">250000</span>
             </div>
             <div class="details-row details-row-net">
               <span class="bold">Nette à payer</span>
-              <span class="bold net-value">16000</span>
+              <span class="bold net-value">{{ montant }}</span>
             </div>
           </div>
         </div>
         <!-- Total à payer -->
         <div class="total-payer">
           <span>Total à payer</span>
-          <span class="bold">16 000 FCFA</span>
+          <span class="bold">{{ montant }}FCFA</span>
         </div>
       </div>
       <!-- Actions -->
       <div class="devis-actions devis-actions-bottom">
         <button class="devis-btn devis-btn-outline">Enrégistrer le devis</button>
         <NuxtLink to="/Step6DevisAuto" class="devis-btn devis-btn-primary">
-          Souscrire à l'assurance à (16 000 FCFA)
+          Souscrire à l'assurance à ({{ montant }}FCFA)
         </NuxtLink>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+// Récupérer la valeur depuis le fichier JSON dans public
+const data = await $fetch('/montant.json')
+const montant = data.montant
+</script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
